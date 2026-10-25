@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — Nook</title>
+<meta name="description" content="Chính sách quyền riêng tư — Nook">
+<style>
+:root { --bg:#0B0B0D; --card:#141418; --line:rgba(255,255,255,.1); --text:#fff; --muted:#B9B9C4; --accent:#FFC857; }
+@media (prefers-color-scheme: light) { :root { --bg:#FAFAF7; --card:#fff; --line:rgba(0,0,0,.1); --text:#141418; --muted:#55555f; --accent:#B87400; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width:760px; margin:0 auto; padding:40px 20px 80px; }
+header { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+header .logo { width:40px; height:40px; border-radius:11px; background:linear-gradient(135deg,#FFE9A8,#E8A020); display:grid; place-items:center; }
+header .logo span { width:16px; height:16px; border:3px solid #2a1d00; border-radius:5px; position:relative; }
+header a { color:var(--text); text-decoration:none; font-weight:800; font-size:22px; }
+nav { margin-left:auto; display:flex; gap:16px; font-size:15px; flex-wrap:wrap; }
+nav a { color:var(--muted); font-weight:500; font-size:15px; }
+h1 { font-size:34px; line-height:1.2; letter-spacing:-.02em; margin:0 0 8px; }
+h2 { font-size:23px; margin:40px 0 8px; }
+h3 { font-size:18px; margin:28px 0 6px; }
+a { color:var(--accent); }
+p, li { color:var(--text); }
+li { margin:4px 0; }
+blockquote { margin:16px 0; padding:12px 16px; border-left:3px solid var(--accent); background:var(--card); border-radius:8px; color:var(--muted); }
+code { font-size:.9em; background:var(--card); padding:1px 5px; border-radius:5px; }
+.table { overflow-x:auto; margin:12px 0; border:1px solid var(--line); border-radius:12px; }
+table { border-collapse:collapse; width:100%; font-size:15px; }
+th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+tr:last-child td { border-bottom:0; }
+footer { margin-top:56px; color:var(--muted); font-size:14px; }
+.cards { display:grid; gap:12px; margin-top:24px; }
+.cards a { display:block; padding:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; text-decoration:none; color:var(--text); }
+.cards a strong { display:block; font-size:18px; }
+.cards a span { color:var(--muted); font-size:15px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="logo"><span></span></div>
+  <a href="index.html">Nook</a>
+  <nav>
+    <a href="ho-tro.html">Hỗ trợ</a>
+    <a href="chinh-sach-rieng-tu.html">Quyền riêng tư</a>
+    <a href="dieu-khoan-su-dung.html">Điều khoản</a>
+  </nav>
+</header>
+<h1 id="chính-sách-quyền-riêng-tư-nook">Chính sách quyền riêng tư — Nook</h1>
+<p><strong>Cập nhật lần cuối: 26/10/2026</strong></p>
+<p>Tài liệu này mô tả đúng những gì ứng dụng Nook thu thập, lưu ở đâu và trong bao lâu. Nội dung được viết theo mã nguồn và lược đồ cơ sở dữ liệu thực tế, không phải mẫu chung.</p>
+<h2 id="chúng-tôi-thu-thập-gì">Chúng tôi thu thập gì</h2>
+<h3 id="bạn-tự-cung-cấp">Bạn tự cung cấp</h3>
+<div class="table"><table><thead><tr><th>Dữ liệu</th><th>Vì sao cần</th><th>Lưu ở đâu</th></tr></thead><tbody><tr><td>Tên đăng nhập</td><td>Định danh tài khoản và để bạn bè tìm bạn</td><td>Bảng <code>profiles</code></td></tr><tr><td>Mật khẩu</td><td>Đăng nhập</td><td>Được <strong>băm</strong> bởi hệ thống xác thực của Supabase; máy chủ của chúng tôi không bao giờ thấy mật khẩu gốc</td></tr><tr><td>Tên hiển thị, ảnh đại diện</td><td>Hiển thị trong bảng tin của bạn bè</td><td>Bảng <code>profiles</code></td></tr><tr><td>Ảnh và video bạn đăng</td><td>Là nội dung chính của ứng dụng</td><td>Kho lưu trữ riêng tư, đường dẫn ghi ở bảng <code>posts</code></td></tr><tr><td>Chú thích, ghi âm phản hồi</td><td>Đi kèm ảnh bạn gửi</td><td>Bảng <code>posts</code> và kho lưu trữ</td></tr><tr><td>Danh sách bạn bè</td><td>Quyết định ai xem được ảnh của bạn</td><td>Bảng <code>friendships</code></td></tr></tbody></table></div>
+<h3 id="thiết-bị-tự-gửi">Thiết bị tự gửi</h3>
+<div class="table"><table><thead><tr><th>Dữ liệu</th><th>Vì sao cần</th></tr></thead><tbody><tr><td>Mã thiết bị nhận thông báo</td><td>Để báo cho bạn khi bạn bè đăng ảnh mới</td></tr><tr><td>Mã băm số điện thoại của bạn (nếu bạn tự thêm)</td><td>Để bạn bè có số này trong danh bạ tìm thấy bạn</td></tr><tr><td>Ảnh đại diện (nếu bạn đặt)</td><td>Hiển thị cạnh tên bạn cho bạn bè</td></tr><tr><td>Email khôi phục (nếu bạn tự thêm)</td><td><strong>Chỉ</strong> để đặt lại mật khẩu khi bạn quên</td></tr><tr><td>Hệ điều hành và phiên bản ứng dụng</td><td>Đính kèm báo cáo lỗi để biết lỗi xảy ra trên bản nào</td></tr><tr><td>Nội dung lỗi và vết gọi hàm khi ứng dụng gặp sự cố</td><td>Sửa lỗi</td></tr><tr><td>Địa chỉ IP</td><td>Chỉ dùng tạm thời để giới hạn số lần đăng nhập sai và chống spam; <strong>không lưu cùng tài khoản của bạn</strong></td></tr></tbody></table></div>
+<h3 id="danh-bạ-chỉ-khi-bạn-bấm-quét-và-chỉ-dạng-mã-hoá">Danh bạ — chỉ khi bạn bấm "Quét", và chỉ dạng mã hoá</h3>
+<p>Tính năng <strong>Tìm bạn từ danh bạ</strong> là tuỳ chọn. Khi bạn bấm Quét:</p>
+<ol><li>Ứng dụng đọc số điện thoại trong danh bạ <strong>ngay trên máy bạn</strong></li><li>Mỗi số được chuẩn hoá và <strong>băm bằng SHA-256</strong> trên máy</li><li>Chỉ các mã băm được gửi lên máy chủ để so với mã băm của các tài khoản</li><li>Máy chủ trả về tài khoản trùng và <strong>không lưu lại</strong> mã băm bạn gửi</li></ol>
+<p>Tên trong danh bạ, số điện thoại gốc, email, ảnh và mọi thứ khác trong danh bạ <strong>không bao giờ rời khỏi máy bạn</strong>. Không bấm Quét thì ứng dụng không đọc danh bạ.</p>
+<p>Nếu bạn tự thêm số của mình, máy chủ chỉ lưu <strong>mã băm</strong> của số đó, không lưu số gốc. Xoá được bất cứ lúc nào.</p>
+<p>Lưu ý trung thực về giới hạn của mã băm: số điện thoại chỉ có khoảng 10 chữ số, nên nếu ai đó có được toàn bộ bảng mã băm, về lý thuyết họ có thể dò ngược từng số. Đây là biện pháp chống rò rỉ tình cờ, không phải bảo vệ tuyệt đối trước người có được bản sao cơ sở dữ liệu. Vì vậy bảng này không có quyền đọc nào ngoài chính máy chủ ứng dụng.</p>
+<h3 id="email-khôi-phục-tuỳ-bạn-và-chỉ-dùng-cho-một-việc">Email khôi phục — tuỳ bạn, và chỉ dùng cho một việc</h3>
+<p>Tài khoản Nook chỉ cần tên đăng nhập và mật khẩu. Bạn <strong>có thể</strong> thêm email trong phần Cài đặt, và nếu thêm thì nó được dùng cho <strong>đúng một việc</strong>: gửi link đặt lại mật khẩu khi bạn quên.</p>
+<p>Chúng tôi không gửi quảng cáo tới email này, không chia sẻ nó, và bạn bè không nhìn thấy nó. Bạn xoá được bất cứ lúc nào.</p>
+<p>Nói thẳng điều đánh đổi: <strong>không đặt email thì không có cách nào lấy lại tài khoản</strong> nếu bạn quên mật khẩu — mất mật khẩu là mất luôn tài khoản và toàn bộ ảnh trong đó. Chúng tôi không giữ mật khẩu ở dạng đọc được nên cũng không thể đọc hộ bạn.</p>
+<h3 id="chúng-tôi-không-thu-thập">Chúng tôi <strong>không</strong> thu thập</h3>
+<ul><li>Tên, email, ảnh trong danh bạ; vị trí, lịch, sức khoẻ hay bất kỳ dữ liệu cảm biến nào khác</li><li>Lịch sử duyệt web hoặc hoạt động của bạn trong các ứng dụng khác</li><li>Thông tin thanh toán — mọi giao dịch Nook Gold do App Store hoặc Google Play xử lý, chúng tôi chỉ nhận kết quả "đã mua" hay "chưa mua"</li><li>Số liệu hoạt động trong mục <strong>Hoạt động của bạn</strong>: các con số này được đếm và giữ <strong>ngay trên máy bạn</strong>, không gửi lên máy chủ</li></ul>
+<h2 id="ai-xem-được-ảnh-của-bạn">Ai xem được ảnh của bạn</h2>
+<p>Chỉ những người bạn đã thêm vào danh sách bạn bè. Quy tắc này được thực thi ở tầng cơ sở dữ liệu, không phải chỉ trong giao diện: mỗi truy vấn đều chạy dưới danh tính của người gọi và bị chặn nếu không có quan hệ bạn bè.</p>
+<p>Ảnh và video không có đường dẫn công khai. Mỗi lần xem, ứng dụng nhận một đường dẫn có chữ ký <strong>hết hạn sau một giờ</strong>. Sau khi hết hạn, đường dẫn đó vô hiệu — kể cả khi ai đó sao chép được nó.</p>
+<h2 id="lưu-ở-đâu">Lưu ở đâu</h2>
+<p>Dữ liệu nằm trên hạ tầng Supabase, khu vực <strong>Tokyo (ap-northeast-1)</strong>. Nếu bạn ở Việt Nam, dữ liệu của bạn được lưu và xử lý ngoài lãnh thổ Việt Nam.</p>
+<h2 id="giữ-trong-bao-lâu">Giữ trong bao lâu</h2>
+<ul><li><strong>Ảnh, video, chú thích:</strong> cho đến khi bạn xoá bài hoặc xoá tài khoản</li><li><strong>Mã băm danh bạ bạn gửi khi Quét:</strong> không lưu — dùng cho đúng một lần so khớp</li><li><strong>Mã băm số của bạn:</strong> cho đến khi bạn xoá nó hoặc xoá tài khoản</li><li><strong>Bộ đếm chống spam:</strong> tự làm mới sau mỗi khung giờ, không gắn với tài khoản</li><li><strong>Báo cáo lỗi:</strong> giữ lại kể cả sau khi bạn xoá tài khoản, nhưng phần liên kết tới bạn bị gỡ bỏ — báo cáo trở thành ẩn danh</li></ul>
+<h2 id="xoá-tài-khoản">Xoá tài khoản</h2>
+<p>Trong ứng dụng: <strong>Hồ sơ → Xoá tài khoản</strong> (ở cuối trang). Bạn phải gõ chữ <code>XOA</code> để xác nhận.</p>
+<p>Thao tác này xoá vĩnh viễn và <strong>ngay lập tức</strong>: hồ sơ, toàn bộ ảnh và video, quan hệ bạn bè, chuỗi ngày, gói Gold và mã thiết bị. Không có bản sao lưu để khôi phục. Chúng tôi không giữ lại bản sao nào ngoài các báo cáo lỗi đã ẩn danh nói trên.</p>
+<p>Nếu không đăng nhập được để tự xoá, hãy viết cho chúng tôi theo địa chỉ ở dưới.</p>
+<h2 id="trẻ-em">Trẻ em</h2>
+<p>Ứng dụng không dành cho trẻ dưới 13 tuổi và chúng tôi không cố ý thu thập dữ liệu của trẻ dưới độ tuổi này.</p>
+<h2 id="bên-thứ-ba">Bên thứ ba</h2>
+<div class="table"><table><thead><tr><th>Dịch vụ</th><th>Nhận gì</th><th>Vì sao</th></tr></thead><tbody><tr><td>Supabase</td><td>Toàn bộ dữ liệu nêu trên</td><td>Lưu trữ và xác thực</td></tr><tr><td>Firebase Cloud Messaging (Google)</td><td>Mã thiết bị và nội dung thông báo</td><td>Gửi thông báo đẩy</td></tr><tr><td>App Store / Google Play</td><td>Giao dịch mua Gold</td><td>Thanh toán</td></tr><tr><td>RevenueCat</td><td>Mã tài khoản Nook của bạn và lịch sử mua Gold (không có ảnh, danh bạ hay tin nhắn)</td><td>Xác minh giao dịch và bật Gold cho đúng tài khoản</td></tr></tbody></table></div>
+<p>Chúng tôi không bán dữ liệu của bạn và không dùng nó cho quảng cáo nhắm mục tiêu.</p>
+<h2 id="thay-đổi-chính-sách">Thay đổi chính sách</h2>
+<p>Khi có thay đổi đáng kể, chúng tôi cập nhật ngày ở đầu tài liệu và thông báo trong ứng dụng trước khi thay đổi có hiệu lực.</p>
+<h2 id="liên-hệ">Liên hệ</h2>
+<ul><li>Đơn vị vận hành: Tuan Nguyen</li><li>Email: Developers9X@gmail.com</li></ul>
+<p>Bạn có quyền yêu cầu xem, sửa hoặc xoá dữ liệu của mình. Chúng tôi trả lời trong vòng 30 ngày.</p>
+<footer>© 2026 Tuan Nguyen · <a href="mailto:Developers9X@gmail.com">Developers9X@gmail.com</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nook</title>
+<meta name="description" content="Nook — ảnh bạn thân, ngay trên màn hình chính">
+<style>
+:root { --bg:#0B0B0D; --card:#141418; --line:rgba(255,255,255,.1); --text:#fff; --muted:#B9B9C4; --accent:#FFC857; }
+@media (prefers-color-scheme: light) { :root { --bg:#FAFAF7; --card:#fff; --line:rgba(0,0,0,.1); --text:#141418; --muted:#55555f; --accent:#B87400; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width:760px; margin:0 auto; padding:40px 20px 80px; }
+header { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+header .logo { width:40px; height:40px; border-radius:11px; background:linear-gradient(135deg,#FFE9A8,#E8A020); display:grid; place-items:center; }
+header .logo span { width:16px; height:16px; border:3px solid #2a1d00; border-radius:5px; position:relative; }
+header a { color:var(--text); text-decoration:none; font-weight:800; font-size:22px; }
+nav { margin-left:auto; display:flex; gap:16px; font-size:15px; flex-wrap:wrap; }
+nav a { color:var(--muted); font-weight:500; font-size:15px; }
+h1 { font-size:34px; line-height:1.2; letter-spacing:-.02em; margin:0 0 8px; }
+h2 { font-size:23px; margin:40px 0 8px; }
+h3 { font-size:18px; margin:28px 0 6px; }
+a { color:var(--accent); }
+p, li { color:var(--text); }
+li { margin:4px 0; }
+blockquote { margin:16px 0; padding:12px 16px; border-left:3px solid var(--accent); background:var(--card); border-radius:8px; color:var(--muted); }
+code { font-size:.9em; background:var(--card); padding:1px 5px; border-radius:5px; }
+.table { overflow-x:auto; margin:12px 0; border:1px solid var(--line); border-radius:12px; }
+table { border-collapse:collapse; width:100%; font-size:15px; }
+th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+tr:last-child td { border-bottom:0; }
+footer { margin-top:56px; color:var(--muted); font-size:14px; }
+.cards { display:grid; gap:12px; margin-top:24px; }
+.cards a { display:block; padding:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; text-decoration:none; color:var(--text); }
+.cards a strong { display:block; font-size:18px; }
+.cards a span { color:var(--muted); font-size:15px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="logo"><span></span></div>
+  <a href="index.html">Nook</a>
+  <nav>
+    <a href="ho-tro.html">Hỗ trợ</a>
+    <a href="chinh-sach-rieng-tu.html">Quyền riêng tư</a>
+    <a href="dieu-khoan-su-dung.html">Điều khoản</a>
+  </nav>
+</header>
+
+<h1>Ảnh bạn thân, ngay trên màn hình chính.</h1>
+<p>Nook là cách nhanh nhất để những người thân nhất thấy bạn đang làm gì. Chụp một tấm,
+ảnh hiện ngay trên widget của bạn bè — chỉ những người bạn chọn.</p>
+<div class="cards">
+  <a href="ho-tro.html"><strong>Hỗ trợ</strong><span>Câu hỏi thường gặp và liên hệ</span></a>
+  <a href="chinh-sach-rieng-tu.html"><strong>Chính sách quyền riêng tư</strong><span>Chúng tôi thu thập gì và vì sao</span></a>
+  <a href="dieu-khoan-su-dung.html"><strong>Điều khoản sử dụng</strong><span>Quy định khi dùng Nook và Nook Gold</span></a>
+</div>
+
+<footer>© 2026 Tuan Nguyen · <a href="mailto:Developers9X@gmail.com">Developers9X@gmail.com</a></footer>
+</main>
+</body>
+</html>
