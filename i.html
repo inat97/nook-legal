@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lời mời vào Nook</title>
+<meta name="description" content="Bạn được mời vào Nook — ảnh bạn thân, ngay trên màn hình chính">
+<style>
+:root { --bg:#0B0B0D; --card:#141418; --line:rgba(255,255,255,.1); --text:#fff; --muted:#B9B9C4; --accent:#FFC857; }
+@media (prefers-color-scheme: light) { :root { --bg:#FAFAF7; --card:#fff; --line:rgba(0,0,0,.1); --text:#141418; --muted:#55555f; --accent:#B87400; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width:760px; margin:0 auto; padding:40px 20px 80px; }
+header { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+header .logo { width:40px; height:40px; border-radius:11px; background:linear-gradient(135deg,#FFE9A8,#E8A020); display:grid; place-items:center; }
+header .logo span { width:16px; height:16px; border:3px solid #2a1d00; border-radius:5px; position:relative; }
+header a { color:var(--text); text-decoration:none; font-weight:800; font-size:22px; }
+nav { margin-left:auto; display:flex; gap:16px; font-size:15px; flex-wrap:wrap; }
+nav a { color:var(--muted); font-weight:500; font-size:15px; }
+h1 { font-size:34px; line-height:1.2; letter-spacing:-.02em; margin:0 0 8px; }
+h2 { font-size:23px; margin:40px 0 8px; }
+h3 { font-size:18px; margin:28px 0 6px; }
+a { color:var(--accent); }
+p, li { color:var(--text); }
+li { margin:4px 0; }
+blockquote { margin:16px 0; padding:12px 16px; border-left:3px solid var(--accent); background:var(--card); border-radius:8px; color:var(--muted); }
+code { font-size:.9em; background:var(--card); padding:1px 5px; border-radius:5px; }
+.table { overflow-x:auto; margin:12px 0; border:1px solid var(--line); border-radius:12px; }
+table { border-collapse:collapse; width:100%; font-size:15px; }
+th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+tr:last-child td { border-bottom:0; }
+footer { margin-top:56px; color:var(--muted); font-size:14px; }
+.cards { display:grid; gap:12px; margin-top:24px; }
+.cards a { display:block; padding:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; text-decoration:none; color:var(--text); }
+.cards a strong { display:block; font-size:18px; }
+.cards a span { color:var(--muted); font-size:15px; }
+.code { font-size:44px; font-weight:800; letter-spacing:.25em; text-align:center; padding:20px 0 6px; font-variant-numeric:tabular-nums; cursor:pointer; color:var(--accent); }
+.muted { color:var(--muted); font-size:15px; text-align:center; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="logo"><span></span></div>
+  <a href="index.html">Nook</a>
+  <nav>
+    <a href="ho-tro.html">Hỗ trợ</a>
+    <a href="chinh-sach-rieng-tu.html">Quyền riêng tư</a>
+    <a href="dieu-khoan-su-dung.html">Điều khoản</a>
+  </nav>
+</header>
+
+<h1 id="invite-title">Bạn được mời vào Nook</h1>
+<p id="invite-lead">Một người bạn muốn thấy ảnh của bạn ngay trên màn hình chính của họ.
+Cài Nook, nhập mã dưới đây khi đăng ký, và hai bạn là bạn bè ngay. Bạn được 7 ngày Nook Gold.</p>
+<div class="code" id="code" aria-live="polite">······</div>
+<p class="muted" id="code-hint">Mã mời của bạn. Chạm để sao chép.</p>
+<div class="cards">
+  <a id="open-app" href="#"><strong>Đã có Nook? Mở app</strong><span>Kết bạn ngay lập tức</span></a>
+  <a id="get-app" href="https://apps.apple.com/vn/app/nook/id6826890826"><strong>Tải Nook trên App Store</strong><span>Miễn phí · iPhone</span></a>
+</div>
+<p class="muted">Sau khi cài, mở Nook → Bạn bè → <strong>Có mã mời? Nhập mã</strong>.</p>
+<script>
+(function () {
+  var code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+  var el = document.getElementById('code');
+  if (!code) {
+    el.textContent = '—';
+    document.getElementById('code-hint').textContent = 'Link này thiếu mã mời. Hỏi lại người đã gửi cho bạn nhé.';
+    document.getElementById('open-app').style.display = 'none';
+    return;
+  }
+  el.textContent = code;
+  document.getElementById('open-app').href = 'nook://invite/' + code;
+  el.addEventListener('click', function () {
+    if (navigator.clipboard) navigator.clipboard.writeText(code).then(function () {
+      document.getElementById('code-hint').textContent = 'Đã sao chép ' + code + '.';
+    });
+  });
+})();
+</script>
+
+<footer>© 2026 Tuan Nguyen · <a href="mailto:Developers9X@gmail.com">Developers9X@gmail.com</a></footer>
+</main>
+</body>
+</html>
