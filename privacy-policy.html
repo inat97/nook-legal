@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Nook</title>
+<meta name="description" content="Privacy Policy — Nook">
+<style>
+:root { --bg:#0B0B0D; --card:#141418; --line:rgba(255,255,255,.1); --text:#fff; --muted:#B9B9C4; --accent:#FFC857; }
+@media (prefers-color-scheme: light) { :root { --bg:#FAFAF7; --card:#fff; --line:rgba(0,0,0,.1); --text:#141418; --muted:#55555f; --accent:#B87400; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width:760px; margin:0 auto; padding:40px 20px 80px; }
+header { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+header .logo { width:40px; height:40px; border-radius:11px; background:linear-gradient(135deg,#FFE9A8,#E8A020); display:grid; place-items:center; }
+header .logo span { width:16px; height:16px; border:3px solid #2a1d00; border-radius:5px; position:relative; }
+header a { color:var(--text); text-decoration:none; font-weight:800; font-size:22px; }
+nav { margin-left:auto; display:flex; gap:16px; font-size:15px; flex-wrap:wrap; }
+nav a { color:var(--muted); font-weight:500; font-size:15px; }
+h1 { font-size:34px; line-height:1.2; letter-spacing:-.02em; margin:0 0 8px; }
+h2 { font-size:23px; margin:40px 0 8px; }
+h3 { font-size:18px; margin:28px 0 6px; }
+a { color:var(--accent); }
+p, li { color:var(--text); }
+li { margin:4px 0; }
+blockquote { margin:16px 0; padding:12px 16px; border-left:3px solid var(--accent); background:var(--card); border-radius:8px; color:var(--muted); }
+code { font-size:.9em; background:var(--card); padding:1px 5px; border-radius:5px; }
+.table { overflow-x:auto; margin:12px 0; border:1px solid var(--line); border-radius:12px; }
+table { border-collapse:collapse; width:100%; font-size:15px; }
+th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+tr:last-child td { border-bottom:0; }
+footer { margin-top:56px; color:var(--muted); font-size:14px; }
+.cards { display:grid; gap:12px; margin-top:24px; }
+.cards a { display:block; padding:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; text-decoration:none; color:var(--text); }
+.cards a strong { display:block; font-size:18px; }
+.cards a span { color:var(--muted); font-size:15px; }
+.code { font-size:44px; font-weight:800; letter-spacing:.25em; text-align:center; padding:20px 0 6px; font-variant-numeric:tabular-nums; cursor:pointer; color:var(--accent); }
+.muted { color:var(--muted); font-size:15px; text-align:center; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="logo"><span></span></div>
+  <a href="index.html">Nook</a>
+  <nav>
+    <a href="ho-tro.html">Support</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms-of-use.html">Terms</a>
+    <a href="chinh-sach-rieng-tu.html" hreflang="vi">Tiếng Việt</a>
+  </nav>
+</header>
+<h1 id="privacy-policy-nook">Privacy Policy — Nook</h1>
+<p><strong>Last updated: 9 November 2026</strong></p>
+<p>This is the English translation of the <a href="chinh-sach-rieng-tu.html">Vietnamese policy</a>. If the two ever differ, the Vietnamese version governs.</p>
+<p>This document describes exactly what the Nook app collects, where it is kept and for how long. It is written from the actual source code and database schema, not from a generic template.</p>
+<h2 id="what-we-collect">What we collect</h2>
+<h3 id="what-you-give-us">What you give us</h3>
+<div class="table"><table><thead><tr><th>Data</th><th>Why it is needed</th><th>Where it is kept</th></tr></thead><tbody><tr><td>Username</td><td>Identifies your account and lets friends find you</td><td><code>profiles</code> table</td></tr><tr><td>Password</td><td>Signing in</td><td><strong>Hashed</strong> by Supabase's authentication system; our server never sees the original password</td></tr><tr><td>Display name, profile photo</td><td>Shown in your friends' feeds</td><td><code>profiles</code> table</td></tr><tr><td>Photos and videos you post</td><td>The main content of the app</td><td>Private storage, with the path recorded in the <code>posts</code> table</td></tr><tr><td>Captions, voice reactions</td><td>Accompany the photos you send</td><td><code>posts</code> table and storage</td></tr><tr><td>Friends list</td><td>Decides who can see your photos</td><td><code>friendships</code> table</td></tr><tr><td>Messages, photos and stickers you send to a friend; the reactions you add</td><td>Private conversation between two people</td><td><code>messages</code> and <code>message_reactions</code> tables and storage; only the sender and the recipient can read them</td></tr><tr><td>The person you choose in couple mode and your anniversary date (if you turn it on)</td><td>Counting days, milestone reminders and the two-photo widget</td><td><code>couples</code> table; only the two of you can see it</td></tr><tr><td>A place or weather caption (if you pick that chip)</td><td>Writes the area name or the temperature on the photo</td><td>Only the text, in the <code>posts</code> table; <strong>coordinates are not stored</strong></td></tr><tr><td>Photos you post in answer to the daily prompt</td><td>Lets your friends see who has answered today</td><td>The prompt date column in the <code>posts</code> table</td></tr><tr><td>Reactions you add to a friend's photo</td><td>Lets the person who posted know what friends think</td><td><code>post_reactions</code> table; seen by the person who posted and their friends</td></tr><tr><td>That you opened a friend's photo, and when you first did</td><td>Lets the person who posted know their photo was seen</td><td><code>post_views</code> table; <strong>only the person who posted that photo can read it</strong></td></tr></tbody></table></div>
+<h3 id="who-knows-you-looked-at-a-photo">Who knows you looked at a photo</h3>
+<p>When you open a friend's photo and keep it on screen for about a second, Nook tells <strong>the person who posted it</strong> that you have seen it. Scrolling quickly past does not count.</p>
+<ul><li>Only <strong>the person who posted</strong> sees this list. Their other friends do not, and you cannot see who has viewed other people's photos.</li><li>Only the <strong>first view</strong> is recorded. However many times you look again, it stays one entry; there is no view counter.</li><li>Nothing is recorded for your own photos.</li><li>The list disappears with the post when the post is deleted.</li></ul>
+<h3 id="what-your-device-sends">What your device sends</h3>
+<div class="table"><table><thead><tr><th>Data</th><th>Why it is needed</th></tr></thead><tbody><tr><td>Push notification token</td><td>To tell you when friends post new photos</td></tr><tr><td>A hash of your phone number (if you add it yourself)</td><td>So friends who have this number in their contacts can find you</td></tr><tr><td>Profile photo (if you set one)</td><td>Shown next to your name to your friends</td></tr><tr><td>Recovery email (if you add one yourself)</td><td><strong>Only</strong> to reset your password if you forget it</td></tr><tr><td>Operating system and app version</td><td>Attached to crash reports so we know which version a bug happened on</td></tr><tr><td>Error details and stack traces when the app runs into a problem</td><td>Fixing bugs</td></tr><tr><td>IP address</td><td>Used only temporarily to limit failed sign-ins and fight spam; <strong>not stored with your account</strong></td></tr></tbody></table></div>
+<h3 id="contacts-only-when-you-tap-scan-and-only-in-hashed-form">Contacts — only when you tap "Scan", and only in hashed form</h3>
+<p><strong>Find friends from contacts</strong> is optional. When you tap <strong>Scan contacts</strong>:</p>
+<ol><li>The app reads the phone numbers in your contacts <strong>on your device</strong></li><li>Each number is normalised and <strong>hashed with SHA-256</strong> on the device</li><li>Only the hashes are sent to the server, to be compared with the hashes of existing accounts</li><li>The server returns the matching accounts and <strong>does not keep</strong> the hashes you sent</li></ol>
+<p>Contact names, the original phone numbers, emails, photos and everything else in your contacts <strong>never leave your device</strong>. If you do not tap Scan, the app does not read your contacts.</p>
+<p>If you add your own number, the server keeps only its <strong>hash</strong>, never the number itself. You can remove it at any time.</p>
+<p>An honest note on the limits of hashing: a phone number has only about 10 digits, so someone who obtained the entire table of hashes could in theory work backwards to each number. This protects against accidental leaks, not against someone holding a copy of the database. That is why no one but the app's own server can read this table.</p>
+<h3 id="recovery-email-your-choice-and-used-for-one-thing-only">Recovery email — your choice, and used for one thing only</h3>
+<p>A Nook account only needs a username and a password. You <strong>can</strong> add an email in Settings, and if you do, it is used for <strong>exactly one thing</strong>: sending a password reset link if you forget your password.</p>
+<p>We do not send marketing to this email, do not share it, and your friends cannot see it. You can remove it at any time.</p>
+<p>To be plain about the trade-off: <strong>without an email there is no way to recover your account</strong> if you forget your password — losing the password means losing the account and every photo in it. We do not keep passwords in readable form, so we cannot look it up for you either.</p>
+<h3 id="what-we-do-not-collect">What we do <strong>not</strong> collect</h3>
+<ul><li>Names, emails or photos from your contacts; your calendar, health or any other sensor data</li><li>Location coordinates. When you pick the <strong>Place</strong> or <strong>Weather</strong> chip while posting, the app asks for permission and reads your coordinates <strong>once, on the device</strong>, turns them into an area name (through Apple's or Google's map service) or a temperature (through Open-Meteo, with the coordinates rounded), and writes only that text on the photo. If you do not pick a chip, the app does not ask for your location.</li><li>Your browsing history or your activity in other apps</li><li>Payment details — every Nook Plus purchase is handled by the App Store or Google Play; we only learn "purchased" or "not purchased"</li><li>The numbers in <strong>What you have been doing</strong>: these are counted and kept <strong>on your device</strong> and never sent to the server</li></ul>
+<h2 id="who-can-see-your-photos">Who can see your photos</h2>
+<p>Only the people you have added as friends. This rule is enforced in the database itself, not just in the interface: every query runs as the person making it and is refused if there is no friendship.</p>
+<p>Photos and videos have no public links. Each time you view one, the app receives a signed link that <strong>expires after one hour</strong>. Once it expires the link no longer works — even if someone copied it.</p>
+<h2 id="where-it-is-kept">Where it is kept</h2>
+<p>Profiles, friends, messages and every data table are on Supabase infrastructure in <strong>Tokyo (ap-northeast-1)</strong>. Photos, videos and voice recordings are in private storage on <strong>Cloudflare R2</strong>, in the Asia-Pacific region. If you live in Vietnam, your data is stored and processed outside Vietnam.</p>
+<h2 id="how-long-it-is-kept">How long it is kept</h2>
+<ul><li><strong>Photos, videos, captions:</strong> until you delete the post or your account</li><li><strong>Messages:</strong> until one of the two people deletes their account</li><li><strong>Views and reactions on a post:</strong> until the post is deleted, or one of the two people deletes their account</li><li><strong>Couple mode:</strong> until you turn it off or unfriend</li><li><strong>Contact hashes sent when you Scan:</strong> not kept — used for a single match</li><li><strong>The hash of your own number:</strong> until you remove it or delete your account</li><li><strong>Spam counters:</strong> reset at the end of each time window and are not tied to your account</li><li><strong>Crash reports:</strong> kept even after you delete your account, but the link to you is removed — the reports become anonymous</li></ul>
+<h2 id="deleting-your-account">Deleting your account</h2>
+<p>In the app: <strong>Profile → Delete account</strong> (at the bottom of the page). You must type <code>XOA</code> to confirm.</p>
+<p>Deletion is permanent and <strong>immediate</strong>: your profile, every photo, video and voice recording, messages, friendships, couple mode, streaks, your Plus subscription record and device tokens. There is no backup to restore from. We keep no copy of anything apart from the anonymised crash reports described above.</p>
+<p>If you cannot sign in to delete it yourself, write to us at the address below.</p>
+<h2 id="children">Children</h2>
+<p>The app is not meant for children under 13, and we do not knowingly collect data from children under that age.</p>
+<h2 id="third-parties">Third parties</h2>
+<div class="table"><table><thead><tr><th>Service</th><th>What it receives</th><th>Why</th></tr></thead><tbody><tr><td>Supabase</td><td>All of the data above, except photo, video and voice files</td><td>Database and authentication</td></tr><tr><td>Cloudflare R2</td><td>Photo, video and voice files</td><td>Private storage; readable only through signed links issued by the server</td></tr><tr><td>Apple's or Google's map service (on the device)</td><td>Coordinates, only when you pick the Place chip</td><td>Turning coordinates into an area name</td></tr><tr><td>Open-Meteo</td><td>Rounded coordinates, only when you pick the Weather chip; never your account</td><td>Getting the current temperature</td></tr><tr><td>Firebase Cloud Messaging (Google)</td><td>Device token and notification content</td><td>Sending push notifications</td></tr><tr><td>App Store / Google Play</td><td>Plus purchases</td><td>Payment</td></tr><tr><td>RevenueCat</td><td>Your Nook account ID and Plus purchase history (no photos, contacts or messages)</td><td>Verifying purchases and turning Plus on for the right account</td></tr></tbody></table></div>
+<p>We do not sell your data and do not use it for targeted advertising.</p>
+<h2 id="changes-to-this-policy">Changes to this policy</h2>
+<p>When something significant changes, we update the date at the top of this document and announce it in the app before the change takes effect.</p>
+<h2 id="contact">Contact</h2>
+<ul><li>Operated by: Tuan Nguyen</li><li>Email: Developers9X@gmail.com</li></ul>
+<p>You have the right to ask to see, correct or delete your data. We reply within 30 days.</p>
+<footer>© 2026 Tuan Nguyen · <a href="mailto:Developers9X@gmail.com">Developers9X@gmail.com</a></footer>
+</main>
+</body>
+</html>
